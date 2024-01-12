@@ -8,7 +8,9 @@ import pandas as pd
 #   catégorielle : ['region'] (southwest, southeast, northeast, northwest)
 #   label : ['smoker'] (yes, no)
 
-model_path = 'data/model.pickle'
+model_path = 'data/model_cv.pickle'
+#model_path = 'data/model_grid.pickle'
+
 m = pickle.load(open(model_path, 'rb'))
 model = m['model']
 preprocessor = m['preprocessor']

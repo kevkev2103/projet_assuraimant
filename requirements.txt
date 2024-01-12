@@ -13,6 +13,7 @@ cycler==0.12.1
 debugpy==1.8.0
 decorator==5.1.1
 executing==2.0.1
+feature-engine==1.6.2
 fonttools==4.47.0
 gitdb==4.0.11
 GitPython==3.1.40
@@ -38,6 +39,7 @@ numpy==1.26.3
 packaging==23.2
 pandas==2.1.4
 parso==0.8.3
+patsy==0.5.6
 pexpect==4.9.0
 pillow==10.2.0
 platformdirs==4.1.0
@@ -63,6 +65,7 @@ seaborn==0.13.1
 six==1.16.0
 smmap==5.0.1
 stack-data==0.6.3
+statsmodels==0.14.1
 streamlit==1.29.0
 tenacity==8.2.3
 threadpoolctl==3.2.0
@@ -76,4 +79,5 @@ tzlocal==5.2
 urllib3==2.1.0
 validators==0.22.0
 wcwidth==0.2.12
+yellowbrick==1.5
 zipp==3.17.0
