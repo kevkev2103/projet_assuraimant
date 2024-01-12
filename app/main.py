@@ -13,7 +13,6 @@ model_path = 'data/model_cv.pickle'
 
 m = pickle.load(open(model_path, 'rb'))
 model = m['model']
-preprocessor = m['preprocessor']
 
 smokerVal = {
             'Oui': 'yes', 
