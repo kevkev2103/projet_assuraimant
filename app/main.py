@@ -2,6 +2,7 @@ import warnings
 warnings.simplefilter(action='ignore', category=Warning)
 
 import pickle
+from joblib import load
 import streamlit as st
 import pandas as pd
 
@@ -14,8 +15,11 @@ import pandas as pd
 #model_path = 'data/model_cv.pickle'
 model_path = 'data/model_grid.pickle'
 
-m = pickle.load(open(model_path, 'rb'))
-model = m['model']
+#m = pickle.load(open(model_path, 'rb'))
+m = load('data/model_grid.joblib')
+print(m)
+
+model = m
 
 smokerVal = {
             'Oui': 'yes', 
