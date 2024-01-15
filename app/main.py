@@ -1,3 +1,6 @@
+import warnings
+warnings.simplefilter(action='ignore', category=Warning)
+
 import pickle
 import streamlit as st
 import pandas as pd
