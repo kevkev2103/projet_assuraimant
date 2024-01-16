@@ -1,10 +1,12 @@
 import warnings
+
+from utils import bmi_transform
 warnings.simplefilter(action='ignore', category=Warning)
 
-import pickle
 from joblib import load
 import streamlit as st
 import pandas as pd
+
 
 # chargement du model et du preprocessor
 # En variables:
@@ -13,14 +15,10 @@ import pandas as pd
 #   label : ['smoker'] (yes, no)
 
 #model_path = 'data/model_cv.pickle'
-model_path = 'data/model_grid.pickle'
+model_path = 'data/model_grid.joblib'
 
 #m = pickle.load(open(model_path, 'rb'))
-m = load('data/model_grid.joblib')
-print(m)
-
-model = m
-
+model = load(model_path)
 smokerVal = {
             'Oui': 'yes', 
             'Non': 'no'
@@ -49,7 +47,7 @@ with st.form("my_form"):
             key="smoker", horizontal=True)
     poids_val = st.number_input('Poids', step=1)
     taille_val = st.number_input('Taille en cm', step=1)
-    age_val = st.number_input('Age', min_value=18, step=1)
+    age_val = st.number_input('Age', min_value=18, step=1, )
     #bmi_val = st.number_input('IMC', min_value=15., max_value=65., step=.1)
     children_val = st.number_input('Enfants', min_value=0, step=1)
     
